@@ -7,7 +7,7 @@ const ui = new inquirer.ui.BottomBar();
 ui.log.write('add line breaks with <br/>')
 
 
-//
+// Objects to populate readme
 
 inquirer.prompt([
     {

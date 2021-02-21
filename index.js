@@ -7,6 +7,8 @@ const ui = new inquirer.ui.BottomBar();
 ui.log.write('add line breaks with <br/>')
 
 
+//
+
 inquirer.prompt([
     {
         type: 'input',
@@ -36,7 +38,7 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'usage',
-        message: 'Usage information?'
+        message: 'Usage info?'
 
     },
     {
@@ -53,17 +55,11 @@ inquirer.prompt([
     {
         type: 'list',
         message: 'License?',
-        name: 'licenseBadge',
+        name: 'license',
         choices: ['MIT', 'GPLv3', 'CC-0', 'BSD-3-Clause', 'WTFPL']
 
     },
-    {
-        type: 'list',
-        message: 'License?',
-        name: 'licenseText',
-        choices: ['MIT', 'GPLv3', 'CC-0', 'BSD-3-Clause', 'WTFPL']
-
-    },
+    
     {
         type: 'input',
         name: 'gitHub',
@@ -78,25 +74,34 @@ inquirer.prompt([
     },
 ])
 
-    .then(() => {
+    .then((response) => {
 
-        const fileName = `./READMEs/ ${data.projectTitle}.md`;
-        const userName = data.userName;
-        const projectTitle = data.projectTitle;
-        const description = data.description;
-        const instaInstr = data.instaInstr;
-        const usage = data.usage;
-        const contrib = data.contrib;
-        const test = data.test;
+        const filename = `./READMEs/${response.projectTitle}.md`;
+        const userName = response.userName;
+        const projectTitle = response.projectTitle;
+        const description = response.description;
+        const instaInstr = response.instaInstr;
+        const usage = response.usage;
+        const contrib = response.contrib;
+        const test = response.test;
+        const license = response.license;
         const licenseBadge = li.choseBadge(license);
         const licenseText = li.choseLicense(license);
-        const gitHub = data.gitHub;
-        const email = data.email;
+        const gitHub = response.gitHub;
+        const email = response.email;
+        
+           // populating sections
+        
+        const fileContent = `# ${response.projectTitle} README
 
+        ${licenseBadge}
 
+    
+    
+        
 
-        //Template
-        const template = `# ${title}
+## Project Title  
+${projectTitle} 
             
 ## Description
         ${ description}
@@ -116,27 +121,19 @@ inquirer.prompt([
 ## Contributing
         ${ contrib}
 ## Tests
-        ${ test};
+        ${ test}
 
         ## Questions
 Please reach-out to me on [GitHub](http://www.github.com/${gitHub}) or email me at: [${email}](mailto:${email})
 ---
+
+    
+
 © ${year} ${userName}`;
 
+   //Writing File with responses to prompts
 
-
-        //function to create readme
-        createNewFile(title, template);
-        function createNewFile(fileName, data) {
-
-            fs.writeFile(`./${fileName.toLowerCase().split(" ").join(" ")}.md`, data, () => {
-                if (err) {
-                    console.log(err);
-                }
-                console.log("Youre README has been generated");
-            })
-
-        }
+        fs.writeFile(filename, fileContent, (err) =>
+            err ? console.log(err) : console.log('You have generated a ReadMe!')
+        );
     });
-
-

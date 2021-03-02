@@ -76,13 +76,13 @@ inquirer.prompt([
 
     .then((response) => {
 
-        const filename = `./READMEs/${response.projectTitle}.md`;
+        const filename = `./READMEs/${response.title}.md`;
         const userName = response.userName;
-        const projectTitle = response.projectTitle;
+        const title = response.title;
         const description = response.description;
-        const instaInstr = response.instaInstr;
+        const install = response.install;
         const usage = response.usage;
-        const contrib = response.contrib;
+        const contributing = response.contributing;
         const test = response.test;
         const license = response.license;
         const licenseBadge = li.choseBadge(license);
@@ -92,7 +92,7 @@ inquirer.prompt([
         
            // populating sections
         
-        const fileContent = `# ${response.projectTitle} README
+        const fileContent = `# ${response.title} README
 
         ${licenseBadge}
 
@@ -101,7 +101,7 @@ inquirer.prompt([
         
 
 ## Project Title  
-${projectTitle} 
+${title} 
             
 ## Description
         ${ description}
@@ -113,13 +113,13 @@ ${projectTitle}
         [Tests](#Tests)
         [Questions](#Questions)
 ## Installation
-        ${ instaInstr}
+        ${ install}
 ## Usage
         ${ usage}
 ## License
         This work is covered under ${ licenseText}
 ## Contributing
-        ${ contrib}
+        ${ contributing}
 ## Tests
         ${ test}
 

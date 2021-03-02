@@ -10,7 +10,7 @@
 README Generator 
             
 ## Description
-        A CLI Readme Generator Using Node.js. Upon completing the Readme Generator, you will have a README.md file that includes, Your name:, Project Title:, Project Description:, Installation Instructions:, Usage:, Contributors:, Test:, License:, Github Username:, and Email:.
+        A CLI Readme Generator Using Node.js. Upon completing the Readme Generator, you will have a README.md file that includes,
 ## Table of Contents
         [Installation](#Installation)
         [Usage](#Usage)
@@ -19,9 +19,9 @@ README Generator
         [Tests](#Tests)
         [Questions](#Questions)
 ## Installation
-        Install Node.js, Clone this repo, npm i to install dependencies, run the app with node index.js
+        Install node.js,clone this repo to your computer, npm i to install dependencies, node index.js to run app.
 ## Usage
-        You will be preseted with a series of propts to generate the README.
+        A Readme.md file will be created after answering a series of prompts.
 ## License
         This work is covered under [The MIT License](https://opensource.org/licenses/MIT)
 ## Contributing

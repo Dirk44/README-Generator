@@ -76,9 +76,9 @@ inquirer.prompt([
 
     .then((response) => {
 
-        const filename = `./READMEs/${response.ProjectTitle}.md`;
+        const filename = `./READMEs/${response.projectTitle}.md`;
         const userName = response.userName;
-        const title = response.projectTitle;
+        // const title = response.projectTitle;
         const description = response.description;
         const install = response.instaInstr;
         const usage = response.usage;
@@ -92,16 +92,16 @@ inquirer.prompt([
         
            // populating sections
         
-        const fileContent = `# ${response.title} README
+        const fileContent = `# ${response.projectTitle} README
 
         ${licenseBadge}
 
     
-    
+        
         
 
-## Project Title  
-${title} 
+ 
+
             
 ## Description
         ${description}

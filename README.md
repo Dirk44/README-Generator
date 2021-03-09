@@ -3,24 +3,14 @@
         [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
     
-    
+        
         
 
-## Project Title  
-README Generator 
+ 
+
             
 ## Description
-        A CLI Readme Generator Using Node.js. Upon completing the Readme Generator, you will have a README.md file that includes,
-         Your name:
-         Project Title: 
-         Project Description: 
-         Installation Instructions: 
-         Usage: 
-         Contributors: 
-         Test:
-         License: 
-         Github Username: 
-         and Email:
+        A CLI Readme Generator Using Node.js. Upon completing the Readme Generator, you will have a README.md file that includes, Your name: Project Title: Project Description: Installation Instructions: Usage: Contributors: Test: License: Github Username: and Email:
 ## Table of Contents
         [Installation](#Installation)
         [Usage](#Usage)

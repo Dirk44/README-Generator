@@ -76,7 +76,7 @@ inquirer.prompt([
 
     .then((response) => {
 
-        const filename = `./READMEs/${response.title}.md`;
+        const filename = `./READMEs/${response.ProjectTitle}.md`;
         const userName = response.userName;
         const title = response.projectTitle;
         const description = response.description;

@@ -10,8 +10,8 @@
 README Generator 
             
 ## Description
-        A CLI Readme Generator Using Node.js. Upon completing the Readme Generator, you will have a README.md file that includes, 
-        Your name:
+        A CLI Readme Generator Using Node.js. Upon completing the Readme Generator, you will have a README.md file that includes,
+         Your name:
          Project Title: 
          Project Description: 
          Installation Instructions: 
@@ -21,7 +21,6 @@ README Generator
          License: 
          Github Username: 
          and Email:
-
 ## Table of Contents
         [Installation](#Installation)
         [Usage](#Usage)

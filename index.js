@@ -78,11 +78,11 @@ inquirer.prompt([
 
         const filename = `./READMEs/${response.title}.md`;
         const userName = response.userName;
-        const title = response.title;
+        const title = response.projectTitle;
         const description = response.description;
-        const install = response.install;
+        const install = response.instaInstr;
         const usage = response.usage;
-        const contributing = response.contributing;
+        const contributing = response.contrib;
         const test = response.test;
         const license = response.license;
         const licenseBadge = li.choseBadge(license);
@@ -92,7 +92,7 @@ inquirer.prompt([
         
            // populating sections
         
-        const fileContent = `# ${response.title} README
+        const fileContent = `# ${response.projectTitle} README
 
         ${licenseBadge}
 
@@ -104,7 +104,7 @@ inquirer.prompt([
 ${title} 
             
 ## Description
-        ${ description}
+        ${description}
 ## Table of Contents
         [Installation](#Installation)
         [Usage](#Usage)
@@ -113,15 +113,15 @@ ${title}
         [Tests](#Tests)
         [Questions](#Questions)
 ## Installation
-        ${ install}
+        ${install}
 ## Usage
-        ${ usage}
+        ${usage}
 ## License
-        This work is covered under ${ licenseText}
+        This work is covered under ${licenseText}
 ## Contributing
-        ${ contributing}
+        ${contributing}
 ## Tests
-        ${ test}
+        ${test}
 
         ## Questions
 Please reach-out to me on [GitHub](http://www.github.com/${gitHub}) or email me at: [${email}](mailto:${email})

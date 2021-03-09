@@ -1,10 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const li = require('./li');
-const year = new Date().getFullYear()
+const year = new Date().getFullYear();
 const ui = new inquirer.ui.BottomBar();
 
-ui.log.write('add line breaks with <br/>')
+ui.log.write('add line breaks with <br/>');
 
 
 // Objects to populate readme
@@ -56,10 +56,10 @@ inquirer.prompt([
         type: 'list',
         message: 'License?',
         name: 'license',
-        choices: ['MIT', 'GPLv3', 'CC-0', 'BSD-3-Clause', 'WTFPL']
+        choices: ['MIT', 'CC-0', 'GPLv3', 'BSD-3-Clause', 'WTFPL']
 
     },
-    
+
     {
         type: 'input',
         name: 'gitHub',
@@ -85,45 +85,44 @@ inquirer.prompt([
         const contributing = response.contrib;
         const test = response.test;
         const license = response.license;
-        const licenseBadge = li.choseBadge(license);
-        const licenseText = li.choseLicense(license);
+        const licenseBadge = li.chooseBadge(license);
+        const licenseText = li.chooseLicense(license);
         const gitHub = response.gitHub;
         const email = response.email;
-        
-           // populating sections
-        
         const fileContent = `# ${response.projectTitle} README
 
         ${licenseBadge}
 
-    
-        
-        
-
- 
 
             
 ## Description
         ${description}
+
 ## Table of Contents
+        
         [Installation](#Installation)
         [Usage](#Usage)
         [License](#License)
         [Contributing](#Contributing)
         [Tests](#Tests)
         [Questions](#Questions)
+
 ## Installation
         ${install}
+
 ## Usage
         ${usage}
+
 ## License
         This work is covered under ${licenseText}
+
 ## Contributing
         ${contributing}
+
 ## Tests
         ${test}
 
-        ## Questions
+## Questions
 Please reach-out to me on [GitHub](http://www.github.com/${gitHub}) or email me at: [${email}](mailto:${email})
 ---
 
@@ -131,7 +130,7 @@ Please reach-out to me on [GitHub](http://www.github.com/${gitHub}) or email me 
 
 © ${year} ${userName}`;
 
-   //Writing File with responses to prompts
+        //Writing File with responses to prompts
 
         fs.writeFile(filename, fileContent, (err) =>
             err ? console.log(err) : console.log('You have generated a ReadMe!')

@@ -1,4 +1,4 @@
-function choseBadge(license) {
+function chooseBadge(license) {
     switch (license) {
         case 'MIT':
             return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
@@ -14,7 +14,7 @@ function choseBadge(license) {
     }
 };
 
-function choseLicense(license) {
+function chooseLicense(license) {
     switch (license) {
         case 'MIT':
             return `[The MIT License](https://opensource.org/licenses/MIT)`;
@@ -31,6 +31,6 @@ function choseLicense(license) {
 };
 
 module.exports = {
-    choseBadge,
-    choseLicense
+    chooseBadge,
+    chooseLicense
 };

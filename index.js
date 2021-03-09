@@ -92,7 +92,7 @@ inquirer.prompt([
         
            // populating sections
         
-        const fileContent = `# ${response.projectTitle} README
+        const fileContent = `# ${response.title} README
 
         ${licenseBadge}
 

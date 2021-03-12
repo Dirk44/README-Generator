@@ -91,36 +91,36 @@ inquirer.prompt([
         const email = response.email;
         const fileContent = `# ${response.projectTitle} README
 
-        ${licenseBadge}
+${licenseBadge}
 
 
             
 ## Description
-        ${description}
+${description}
 
 ## Table of Contents
         
-        [Installation](#Installation)
-        [Usage](#Usage)
-        [License](#License)
-        [Contributing](#Contributing)
-        [Tests](#Tests)
-        [Questions](#Questions)
+[Installation](#Installation)
+[Usage](#Usage)
+[License](#License)
+[Contributing](#Contributing)
+[Tests](#Tests)
+[Questions](#Questions)
 
 ## Installation
-        ${install}
+${install}
 
 ## Usage
-        ${usage}
+${usage}
 
 ## License
-        This work is covered under ${licenseText}
+This work is covered under ${licenseText}
 
 ## Contributing
-        ${contributing}
+${contributing}
 
 ## Tests
-        ${test}
+${test}
 
 ## Questions
 Please reach-out to me on [GitHub](http://www.github.com/${gitHub}) or email me at: [${email}](mailto:${email})
